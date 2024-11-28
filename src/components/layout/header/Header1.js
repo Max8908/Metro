@@ -35,6 +35,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                         <figure className="logo"><Link href="/"><img src="assets/images/logo.png" alt="" /></Link></figure>
                         </div>
                         <div className="menu-area">
+                        <LanguageSelector />
                         {/* Mobile Navigation Toggler */}
                         <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
                             <i className="icon-bar"></i>
@@ -47,7 +48,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                             </div>
                         </nav>
                         <div className="menu-right-content ml_70">
-                            <LanguageSelector />
+                            {/* <LanguageSelector /> */}
                             <Link href="/login" className="theme-btn btn-two mr_20">{t('loginheader')}</Link>
                             <Link href="/register" className="theme-btn btn-one">{t('registerheader')}</Link>
                         </div>
@@ -81,7 +82,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                 </div>
                 {/* End Sticky Menu */}
                 {/* Mobile Menu  */}
-
                 <MobileMenu handleMobileMenu={handleMobileMenu} />
             </header>
         </>
